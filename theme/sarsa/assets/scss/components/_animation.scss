@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Keyframe Animation
+===============================*/
+@-webkit-keyframes lineMove {
+    from {
+		background-position: left;
+	}
+	to {
+		background-position: right;
+	}
+}
+
+@keyframes lineMove {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+}
+

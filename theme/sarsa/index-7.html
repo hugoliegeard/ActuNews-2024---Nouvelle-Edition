@@ -1,0 +1,307 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sarsa - News & Magazine HTML Template</title>
+    <meta name="description" content="Sarsa - News & Magazine HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/imageRevealHover.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header class="header__style-seven">
+        <div class="header__top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-7">
+                        <div class="d-flex gap-4 align-items-center">
+                            <div class="offcanvas-toggle">
+                                <a href="#"><i class="flaticon-menu-bar"></i></a>
+                            </div>
+                            <div class="header__top-logo logo">
+                                <a href="index.html" class="logo-dark">
+                                    <img src="assets/img/logo/logo.png" alt="Logo">
+                                </a>
+                                <a href="index.html" class="logo-light">
+                                    <img src="assets/img/logo/w_logo.png" alt="Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-5 order-3 order-lg-0">
+                        <div class="header__top-search">
+                            <form action="#">
+                                <input type="text" placeholder="Search here...">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-3 col-sm-6 col-5 order-2 order-lg-2">
+                        <div class="header__top-right">
+                            <ul class="list-wrap">
+                                <li class="news-btn"><a href="#newsletter" class="btn"><span class="btn-text">subscribe</span></a></li>
+                                <li class="lang d-none d-sm-block">
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            ENG
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">SPA</a></li>
+                                            <li><a class="dropdown-item" href="#">GRE</a></li>
+                                            <li><a class="dropdown-item" href="#">CIN</a></li>
+                                            <li><a class="dropdown-item" href="#">CIN</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- offCanvas-area -->
+        <div class="offCanvas__wrap">
+            <div class="offCanvas__body">
+                <div class="offCanvas__toggle"><i class="flaticon-addition"></i></div>
+                <div class="offCanvas__content">
+                    <div class="offCanvas__logo logo">
+                        <a href="index.html" class="logo-dark"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                        <a href="index.html" class="logo-light"><img src="assets/img/logo/w_logo.png" alt="Logo"></a>
+                    </div>
+                    <p>Change how the world works with Biotellus, made for ecology.</p>
+                </div>
+                <div class="offCanvas__menu-wrapper">
+                    <ul class="navigation">
+                        <li class="active menu-item-has-children"><a href="#">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Home Default</a></li>
+                                <li><a href="index-2.html">Home Interior</a></li>
+                                <li><a href="index-3.html">Home Travel</a></li>
+                                <li><a href="index-4.html">Home Technology</a></li>
+                                <li><a href="index-5.html">Home NFT</a></li>
+                                <li><a href="index-6.html">Home Fashion</a></li>
+                                <li class="active"><a href="index-7.html">Home Adventure</a></li>
+                                <li><a href="index-8.html">Home Minimal</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="lifestyle.html">Lifestyle</a></li>
+                        <li><a href="travel.html">Travel</a></li>
+                        <li class="menu-item-has-children"><a href="#">Post Type</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog.html">Our Blog</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="nft.html">NFT</a></li>
+                    </ul>
+                </div>
+                <div class="offCanvas__contact">
+                    <h4 class="title">Get In Touch</h4>
+                    <ul class="offCanvas__contact-list list-wrap">
+                        <li><i class="fas fa-envelope-open"></i><a href="mailto:info@webmail.com">info@webmail.com</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:88899988877">888 999 888 77</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 12/A, New Booston, NYC</li>
+                    </ul>
+                    <ul class="offCanvas__social list-wrap">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="offCanvas__overlay"></div>
+        <!-- offCanvas-area-end -->
+
+   </header>
+   <!-- header-area-end -->
+
+
+    <!-- main-area -->
+    <main>
+
+        <!-- adventure-post-area -->
+        <div class="adventure__post-area pt-20 pb-70">
+            <div class="container">
+                <div class="adventure__post-wrapper">
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure01.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="Why we need guidelines for brain scan data to real data." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure02.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure03.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="Why we need guidelines for brain scan data to real data." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure04.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure05.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="Why we need guidelines for brain scan data to real data." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure06.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure07.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure08.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure09.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure10.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure11.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="adventure__post-item grid-item tg-img-reveal-item" data-author="miranda h."
+                        data-title="The multiverse is a hypothetical group of the universes." data-date="nov 21, 2022" data-fx="1">
+                        <div class="adventure__post-thumb tgImage__hover">
+                            <a href="blog-details.html"><img src="assets/img/adventure/adventure12.jpg" alt="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- adventure-post-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+
+
+    <!-- footer-area -->
+    <footer class="footer-area black-bg border-top-none">
+        <div class="container">
+            <div class="footer__logo-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="footer__logo logo">
+                            <a href="index.html"><img src="assets/img/logo/w_logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="footer__social">
+                            <ul class="list-wrap">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook <span>25K</span></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter <span>44K</span></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i> Youtube <span>91K</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright__text">
+                            <p>Copyright & Design By <span>@Theme_Genix</span> - 2022</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="copyright__menu">
+                            <ul class="list-wrap">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Advertise</a></li>
+                                <li><a href="#">Store</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/imageRevealHover.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

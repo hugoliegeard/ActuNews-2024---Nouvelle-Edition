@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+/*=============================
+    09. Stories Post
+===============================*/
+.stories-post {
+    &__item {
+        margin: 0 0 50px;
+        @media #{$md} {
+            margin: 0 0 40px;
+        }
+    }
+    &__thumb {
+        margin: 0 0 35px;
+        @media #{$lg} {
+            margin: 0 0 25px;
+        }
+        & img {
+            height: 340px;
+            object-fit: cover;
+            object-position: center;
+            @media #{$lg} {
+                height: 280px;
+            }
+            @media #{$md} {
+                height: 200px;
+                width: 100%;
+            }
+            @media #{$sm} {
+                height: 280px;
+            }
+        }
+    }
+    &__content {
+        & .title {
+            line-height: 1.3;
+            font-size: 30px;
+            @media #{$lg} {
+                font-size: 23px;
+            }
+            @media #{$md} {
+                font-size: 20px;
+            }
+            @media #{$sm} {
+                font-size: 22px;
+            }
+        }
+    }
+}
+.stories-small-post {
+    &__item {
+        margin: 0 0 40px;
+    }
+}

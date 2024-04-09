@@ -1,0 +1,152 @@
+@use '../utils' as *;
+
+/*=============================
+    05. Trending Post
+===============================*/
+.trending {
+    &__post {
+        &-thumb {
+            margin: 0 0 25px;
+            position: relative;
+            & a {
+                display: block;
+                position: relative;
+                &:not(.addWish):before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--tg-theme-secondary);
+                    @include transition(.4s);
+                    z-index: 1;
+                    opacity: 0;
+                }
+                &.addWish {
+                    position: absolute;
+                    top: 18px;
+                    right: 18px;
+                    z-index: 2;
+                    line-height: 1;
+                    font-size: 14px;
+                    color: #fff;
+                    @include transition(.4s);
+                    opacity: 0;
+                }
+            }
+            & img {
+                display: block;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                @include transition(.4s);
+                @media #{$xs} {
+                    width: 100%;
+                }
+                @media #{$sm} {
+                    height: 280px;
+                }
+            }
+            & .is_trend {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                color: var(--tg-common-color-white);
+                background: var(--tg-theme-primary);
+                z-index: 3;
+            }
+        }
+        &-content {
+            & .title {
+                font-size: 20px;
+                line-height: 1.4;
+                margin: 0 0;
+                @media #{$xl} {
+                    font-size: 18px;
+                }
+                @media #{$md} {
+                    font-size: 20px;
+                }
+            }
+            & .post__activity {
+                margin: 20px 0 0;
+            }
+        }
+        & .tgbanner__content-meta {
+            margin: 0 0 6px;
+        }
+        &:hover {
+            & .trending__post-thumb a {
+                &::before {
+                    opacity: .5;
+                }
+            }
+            & .trending__post-thumb a.addWish {
+                opacity: 1;
+            }
+        }
+    }
+}
+.post__activity {
+    @include flexbox();
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    & li {
+        line-height: 1;
+        font-size: 14px;
+        & i {
+            color: #b0b0b0;
+            margin-right: 3px;
+        }
+        & a {
+            color: var(--tg-body-color);
+            display: block;
+            &:hover {
+                color: var(--tg-theme-primary);
+            }
+        }
+    }
+}
+
+.dark-post-slider {
+    margin: 0 -105px 0 -45px;
+    @media #{$xl} {
+        margin: 0 -150px 0 -100px;
+    }
+    @media #{$md} {
+        margin: 0 auto;
+        max-width: 720px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$sm} {
+        max-width: 540px;
+    }
+    & .tgbanner__content-meta li:not(.category) a,
+    & .trending__post-content .title {
+        color: var(--tg-common-color-white);
+    }
+    & .trending__post-content .title {
+        & a {
+            background-image: linear-gradient(var(--tg-common-color-white), var(--tg-common-color-white)), linear-gradient(var(--tg-common-color-white), var(--tg-common-color-white));
+        }
+    }
+    & .tgbanner__content-meta li .by {
+        color: #4e4e4e;
+    }
+    & .post__activity li,
+    & .post__activity li a {
+        color: #aeaeae;
+    }
+    & .post__activity li i {
+        color: #666666;
+    }
+}

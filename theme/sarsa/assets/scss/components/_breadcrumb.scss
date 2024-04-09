@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Breadcrumb
+===============================*/
+.breadcrumb {
+    gap: 5px 13px;
+    margin: 0 0;
+    &-area {
+        margin: -1px 0 0;
+    }
+    &-content {
+        background: var(--tg-common-color-white);
+        padding: 24px 30px;
+        @media #{$xs} {
+            padding: 24px 25px;
+        }
+    }
+    &-item {
+        @include flexbox();
+        gap: 13px;
+        padding: 0 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: var(--tg-fw-bold);
+        color: var(--tg-heading-color);
+        &+.breadcrumb-item {
+            padding: 0 0;
+        }
+        &::before {
+            display: none;
+        }
+        &::after {
+            content: "\f105";
+            display: block;
+            font-family: var(--tg-icon-font-family);
+            color: var(--tg-theme-primary);
+            opacity: .4;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        &.active {
+            color: var(--tg-theme-primary);
+        }
+        & a {
+            display: block;
+            color: var(--tg-heading-color);
+        }
+    }
+}

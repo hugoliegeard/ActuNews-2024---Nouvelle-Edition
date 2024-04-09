@@ -1,0 +1,80 @@
+@use '../utils' as *;
+
+/*=============================
+    10. Popular Post
+===============================*/
+.popular {
+    &__post-area {
+        & .trending__post-thumb {
+            margin: 0 0 30px;
+            & img {
+                height: 280px;
+                width: 100%;
+                @media #{$xl} {
+                    height: 260px;
+                }
+                @media #{$lg} {
+                    height: 280px;
+                }
+                @media #{$md} {
+                    height: 220px;
+                }
+                @media #{$sm} {
+                    height: 280px;
+                }
+            }
+        }
+        & .tgbanner__content-meta {
+            margin: 0 0 12px;
+        }
+        & .trending__post-content .title {
+            font-size: 24px;
+            line-height: 1.3;
+            @media #{$lg} {
+                font-size: 20px;
+            }
+        }
+    }
+}
+.lifestyle {
+    &__popular-area {
+        & .trending__post-thumb {
+            position: relative;
+            & .tags {
+                position: absolute;
+                left: 40px;
+                top: 0;
+                padding: 8px 12px;
+                text-transform: uppercase;
+                font-weight: var(--tg-fw-bold);
+                font-size: 14px;
+                line-height: 1;
+                background: var(--tg-theme-primary);
+                color: var(--tg-common-color-white);
+                z-index: 2;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        & .trending__post-content {
+            @include flexbox();
+            gap: 0 25px;
+            & .post--count {
+                font-size: 40px;
+                color: var(--tg-theme-primary);
+                letter-spacing: -1px;
+                margin: 0 0;
+            }
+            & .title {
+                font-size: 20px;
+                @media #{$md} {
+                    font-size: 18px;
+                }
+                @media #{$sm} {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

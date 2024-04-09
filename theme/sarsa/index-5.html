@@ -1,0 +1,903 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sarsa - News & Magazine HTML Template</title>
+    <meta name="description" content="Sarsa - News & Magazine HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/imageRevealHover.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header class="header__style-two header__style-three header__style-five">
+        <div class="header__top-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-7 d-none d-md-block">
+                        <div class="header__top-right header__top-menu">
+                            <ul class="list-wrap">
+                                <li class="lang">
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            ENGLISH
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">SPAnish</a></li>
+                                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                            <li><a class="dropdown-item" href="#">chinese</a></li>
+                                            <li><a class="dropdown-item" href="#">Arabic</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">Advertise</a></li>
+                                <li class="buy-theme"><a href="#">Buy theme <span>$19</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5">
+                        <div class="header__top-bar-right">
+                            <ul class="list-wrap top-bar-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                            <a href="#" class="sign-in"><i class="fas fa-user"></i> Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="tg-header__area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tgmenu__wrap">
+                            <nav class="tgmenu__nav">
+                                <div class="d-flex gap-4 align-items-center">
+                                    <div class="offcanvas-toggle">
+                                        <a href="#"><i class="flaticon-menu-bar"></i></a>
+                                    </div>
+                                    <div class="logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    </div>
+                                </div>
+                                <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
+                                    <ul class="navigation">
+                                        <li class="active menu-item-has-children"><a href="#">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Home Default</a></li>
+                                                <li><a href="index-2.html">Home Interior</a></li>
+                                                <li><a href="index-3.html">Home Travel</a></li>
+                                                <li><a href="index-4.html">Home Technology</a></li>
+                                                <li class="active"><a href="index-5.html">Home NFT</a></li>
+                                                <li><a href="index-6.html">Home Fashion</a></li>
+                                                <li><a href="index-7.html">Home Adventure</a></li>
+                                                <li><a href="index-8.html">Home Minimal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="lifestyle.html">Lifestyle</a></li>
+                                        <li><a href="travel.html">Travel</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Post Type</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html">Our Blog</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="nft.html">NFT</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tgmenu__action">
+                                    <ul class="list-wrap">
+                                        <li class="mode-switcher">
+                                            <nav class="switcher__tab">
+                                                <span class="switcher__btn light-mode"><i class="flaticon-sun"></i></span>
+                                                <span class="switcher__mode"></span>
+                                                <span class="switcher__btn dark-mode"><i class="flaticon-moon"></i></span>
+                                            </nav>
+                                        </li>
+                                        <li class="user"><a href="#"><i class="far fa-user"></i></a></li>
+                                        <li class="header-cart"><a href="#"><i class="far fa-shopping-basket"></i></a></li>
+                                        <li class="header-search"><a href="#"><i class="far fa-search"></i></a>
+                                            <div class="header__top-search">
+                                                <form action="#">
+                                                    <input type="text" placeholder="Search here...">
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                        </div>
+                        <!-- Mobile Menu  -->
+                        <div class="tgmobile__menu">
+                            <nav class="tgmobile__menu-box">
+                                <div class="close-btn"><i class="fas fa-times"></i></div>
+                                <div class="nav-logo">
+                                    <a href="index.html" class="logo-dark"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                                    <a href="index.html" class="logo-light"><img src="assets/img/logo/w_logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="tgmobile__search">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search here...">
+                                        <button><i class="far fa-search"></i></button>
+                                    </form>
+                                </div>
+                                <div class="tgmobile__menu-outer">
+                                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                </div>
+                                <div class="social-links">
+                                    <ul class="list-wrap">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="tgmobile__menu-backdrop"></div>
+                        <!-- End Mobile Menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- offCanvas-area -->
+        <div class="offCanvas__wrap">
+            <div class="offCanvas__body">
+                <div class="offCanvas__toggle"><i class="flaticon-addition"></i></div>
+                <div class="offCanvas__content">
+                    <div class="offCanvas__logo logo">
+                        <a href="index.html" class="logo-dark"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                        <a href="index.html" class="logo-light"><img src="assets/img/logo/w_logo.png" alt="Logo"></a>
+                    </div>
+                    <p>Change how the world works with Biotellus, made for ecology.</p>
+                    <ul class="offCanvas__instagram list-wrap">
+                        <li><a href="assets/img/blog/blog01.jpg" class="popup-image"><img src="assets/img/blog/blog01.jpg" alt="img"></a></li>
+                        <li><a href="assets/img/blog/blog02.jpg" class="popup-image"><img src="assets/img/blog/blog02.jpg" alt="img"></a></li>
+                        <li><a href="assets/img/blog/blog03.jpg" class="popup-image"><img src="assets/img/blog/blog03.jpg" alt="img"></a></li>
+                        <li><a href="assets/img/blog/blog04.jpg" class="popup-image"><img src="assets/img/blog/blog04.jpg" alt="img"></a></li>
+                        <li><a href="assets/img/blog/blog05.jpg" class="popup-image"><img src="assets/img/blog/blog05.jpg" alt="img"></a></li>
+                        <li><a href="assets/img/blog/blog06.jpg" class="popup-image"><img src="assets/img/blog/blog06.jpg" alt="img"></a></li>
+                    </ul>
+                </div>
+                <div class="offCanvas__contact">
+                    <h4 class="title">Get In Touch</h4>
+                    <ul class="offCanvas__contact-list list-wrap">
+                        <li><i class="fas fa-envelope-open"></i><a href="mailto:info@webmail.com">info@webmail.com</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:88899988877">888 999 888 77</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 12/A, New Booston, NYC</li>
+                    </ul>
+                    <ul class="offCanvas__social list-wrap">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="offCanvas__overlay"></div>
+        <!-- offCanvas-area-end -->
+
+   </header>
+   <!-- header-area-end -->
+
+
+    <!-- main-area -->
+    <main>
+
+        <!-- slider-area -->
+        <section class="slider__area slider__style-two fix" data-background="assets/img/bg/banner_bg.jpg">
+            <div class="container">
+                <div class="slider-active">
+                    <div class="slider__item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="slider__content">
+                                    <ul class="tgbanner__content-meta list-wrap" data-animation-in="tg-fadeInUp" data-delay-in=".2">
+                                        <li class="category"><a href="blog.html">bitcoin</a></li>
+                                        <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                        <li>nov 21, 2022</li>
+                                    </ul>
+                                    <h2 class="title" data-animation-in="tg-fadeInUp" data-delay-in=".6">The Top Privacy Coin Saw Fewer Percentage Losses Than...</h2>
+                                    <a href="blog-details.html" class="btn border-btn" data-animation-in="tg-fadeInUp" data-delay-in="1"><span class="btn-text">Read More</span> <i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="slider__img-wrap">
+                                    <img src="assets/img/nft/nft_slider01.jpg" class="main-img" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="slider__content">
+                                    <ul class="tgbanner__content-meta list-wrap" data-animation-in="tg-fadeInUp" data-delay-in=".2">
+                                        <li class="category"><a href="blog.html">technology</a></li>
+                                        <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                        <li>nov 21, 2022</li>
+                                    </ul>
+                                    <h2 class="title" data-animation-in="tg-fadeInUp" data-delay-in=".6">Practical steps to build transparency in your remote business</h2>
+                                    <a href="blog-details.html" class="btn border-btn" data-animation-in="tg-fadeInUp" data-delay-in="1"><span class="btn-text">Read More</span> <i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="slider__img-wrap">
+                                    <img src="assets/img/nft/nft_slider02.jpg" class="main-img" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="slider__content">
+                                    <ul class="tgbanner__content-meta list-wrap" data-animation-in="tg-fadeInUp" data-delay-in=".2">
+                                        <li class="category"><a href="blog.html">technology</a></li>
+                                        <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                        <li>nov 21, 2022</li>
+                                    </ul>
+                                    <h2 class="title" data-animation-in="tg-fadeInUp" data-delay-in=".6">Practical steps to build transparency in your remote business</h2>
+                                    <a href="blog-details.html" class="btn border-btn" data-animation-in="tg-fadeInUp" data-delay-in="1"><span class="btn-text">Read More</span> <i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="slider__img-wrap">
+                                    <img src="assets/img/nft/nft_slider03.jpg" class="main-img" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="slider__content">
+                                    <ul class="tgbanner__content-meta list-wrap" data-animation-in="tg-fadeInUp" data-delay-in=".2">
+                                        <li class="category"><a href="blog.html">technology</a></li>
+                                        <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                        <li>nov 21, 2022</li>
+                                    </ul>
+                                    <h2 class="title" data-animation-in="tg-fadeInUp" data-delay-in=".6">Practical steps to build transparency in your remote business</h2>
+                                    <a href="blog-details.html" class="btn border-btn" data-animation-in="tg-fadeInUp" data-delay-in="1"><span class="btn-text">Read More</span> <i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="slider__img-wrap">
+                                    <img src="assets/img/nft/nft_slider04.jpg" class="main-img" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__marquee clearfix">
+                    <div class="marquee_mode">
+                        <h6 class="item">BTC $20211.23 <span>+1.07%</span></h6>
+                        <h6 class="item">eth $1533.56 <span>+3.12%</span></h6>
+                        <h6 class="item">bnb $281.43 <span>+0.02%</span></h6>
+                        <h6 class="item">busd $1.00 <span>+0.01%</span></h6>
+                        <h6 class="item minus">xrp $0.33 <span>-2.62%</span></h6>
+                        <h6 class="item">ada $0.45 <span>+0.16%</span></h6>
+                        <h6 class="item minus">sol $31.54 <span>-1.14%</span></h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- slider-area-end -->
+
+        <!-- popular-area -->
+        <section class="popular__post-area section__hover-line pt-75 pb-75">
+            <div class="container">
+                <div class="section__title-wrap mb-40">
+                    <div class="row align-items-end">
+                        <div class="col-sm-6">
+                            <div class="section__title">
+                                <span class="section__sub-title">Popular</span>
+                                <h3 class="section__main-title">Popular Post</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="section__read-more text-start text-sm-end">
+                                <a href="blog.html">More Popular Post <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending__slider">
+                    <div class="swiper-container popular-active">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog01.jpg" alt="img"></a>
+                                        <span class="is_trend"><i class="fas fa-bolt"></i></span>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">Gaming</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                            <li>nov 21, 2022</li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">Why we need guidelines for brain scan data to real data.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog02.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">tech</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                            <li>nov 21, 2022</li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">The Multiverse is the collection of alternate universes</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog03.jpg" alt="img"></a>
+                                        <span class="is_trend"><i class="fas fa-bolt"></i></span>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">movie</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                            <li>nov 21, 2022</li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">That share a universal hierarchy a large variety of these</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog04.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">sports</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                            <li>nov 21, 2022</li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">Universes were originated from another due to a major</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog05.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">sports</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                            <li>nov 21, 2022</li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">A hypothetical collection of the potentially diverse</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- popular-area-end -->
+
+        <!-- trending-area -->
+        <section class="trending-post-area white-bg section__hover-line pt-75 pb-80">
+            <div class="container">
+                <div class="section__title-wrap mb-40">
+                    <div class="row align-items-end">
+                        <div class="col-sm-6">
+                            <div class="section__title">
+                                <span class="section__sub-title">Popular Posts</span>
+                                <h3 class="section__main-title">Trending News</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="section__read-more text-start text-sm-end">
+                                <a href="blog.html">More Post <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending__slider">
+                    <div class="swiper-container trending-active">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog06.jpg" alt="img"></a>
+                                        <span class="is_trend"><i class="fas fa-bolt"></i></span>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">Gaming</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">Scientists speculate that ours might not be held</a></h4>
+                                        <ul class="post__activity list-wrap">
+                                            <li><i class="fal fa-signal"></i> 1.0k</li>
+                                            <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 128</a></li>
+                                            <li><i class="fal fa-share-alt"></i> 29</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog07.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">tech</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">The Multiverse is the collection of alternate universes</a></h4>
+                                        <ul class="post__activity list-wrap">
+                                            <li><i class="fal fa-signal"></i> 1.0k</li>
+                                            <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 115</a></li>
+                                            <li><i class="fal fa-share-alt"></i> 19</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog08.jpg" alt="img"></a>
+                                        <span class="is_trend"><i class="fas fa-bolt"></i></span>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">movie</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">That share a universal hierarchy a large variety of these</a></h4>
+                                        <ul class="post__activity list-wrap">
+                                            <li><i class="fal fa-signal"></i> 1.2k</li>
+                                            <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 110</a></li>
+                                            <li><i class="fal fa-share-alt"></i> 16</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog09.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">sports</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">Universes were originated from another due to a major</a></h4>
+                                        <ul class="post__activity list-wrap">
+                                            <li><i class="fal fa-signal"></i> 1.5k</li>
+                                            <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                            <li><i class="fal fa-share-alt"></i> 42</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="trending__post">
+                                    <div class="trending__post-thumb tgImage__hover">
+                                        <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                        <a href="blog-details.html"><img src="assets/img/nft/nft_blog10.jpg" alt="img"></a>
+                                    </div>
+                                    <div class="trending__post-content">
+                                        <ul class="tgbanner__content-meta list-wrap">
+                                            <li class="category"><a href="blog.html">sports</a></li>
+                                            <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                        </ul>
+                                        <h4 class="title tgcommon__hover"><a href="blog-details.html">A hypothetical collection of potentially diverse</a></h4>
+                                        <ul class="post__activity list-wrap">
+                                            <li><i class="fal fa-signal"></i> 1.5k</li>
+                                            <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                            <li><i class="fal fa-share-alt"></i> 32</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- trending-area-end -->
+
+        <!-- Video-post-area -->
+        <section class="video-post-area nft-video-post section__hover-line pt-75 pb-80">
+            <div class="container">
+                <div class="section__title-wrap mb-40">
+                    <div class="row align-items-end">
+                        <div class="col-sm-6">
+                            <div class="section__title">
+                                <span class="section__sub-title">Video</span>
+                                <h3 class="section__main-title">Recent Video Post</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="section__read-more text-start text-sm-end">
+                                <a href="blog.html">More Video Post <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="video__post-item big-post">
+                            <div class="video__post-thumb">
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog08.jpg" alt="img"></a>
+                                <a href="https://www.youtube.com/watch?v=FT3ODSg1GFE" class="popup-video"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">technology</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                    <li>nov 21, 2022</li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">The multiverse is a hypothetical group of multiple universes.</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="video__post-item side-post">
+                            <div class="video__post-thumb tgImage__hover">
+                                <a href="https://www.youtube.com/watch?v=FT3ODSg1GFE" class="popup-video"><img src="assets/img/nft/nft_blog09.jpg" alt="img"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">medical</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">Stanford physicists Andrei
+                                Linde In a new study</a></h3>
+                            </div>
+                        </div>
+                        <div class="video__post-item side-post">
+                            <div class="video__post-thumb tgImage__hover">
+                                <a href="https://www.youtube.com/watch?v=FT3ODSg1GFE" class="popup-video"><img src="assets/img/nft/nft_blog10.jpg" alt="img"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">medical</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">Accessible to telescopes, is about 90 billion years</a></h3>
+                            </div>
+                        </div>
+                        <div class="video__post-item side-post">
+                            <div class="video__post-thumb tgImage__hover">
+                                <a href="https://www.youtube.com/watch?v=FT3ODSg1GFE" class="popup-video"><img src="assets/img/nft/nft_blog11.jpg" alt="img"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">medical</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">Observable universes each of which would comprise</a></h3>
+                            </div>
+                        </div>
+                        <div class="video__post-item side-post">
+                            <div class="video__post-thumb tgImage__hover">
+                                <a href="https://www.youtube.com/watch?v=FT3ODSg1GFE" class="popup-video"><img src="assets/img/nft/nft_blog06.jpg" alt="img"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">medical</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">Experimentally accessible by a connected community</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Video-post-area-end -->
+
+        <!-- stories-post-area -->
+        <section class="stories-post-area white-bg section__hover-line pt-75 pb-40">
+            <div class="container">
+                <div class="section__title-wrap mb-40">
+                    <div class="row align-items-end">
+                        <div class="col-sm-6">
+                            <div class="section__title">
+                                <span class="section__sub-title">Stories</span>
+                                <h3 class="section__main-title">Popular Stories</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="section__read-more text-start text-sm-end">
+                                <a href="blog.html">Stories Post <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-gutters-40">
+                    <div class="col-md-6">
+                        <div class="stories-post__item">
+                            <div class="stories-post__thumb tgImage__hover">
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog12.jpg" alt="img"></a>
+                            </div>
+                            <div class="stories-post__content video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">technology</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                    <li>nov 21, 2022</li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">The multiverse is a hypothetical group of the multiple universes.</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stories-post__item">
+                            <div class="stories-post__thumb tgImage__hover">
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog13.jpg" alt="img"></a>
+                            </div>
+                            <div class="stories-post__content video__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">technology</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">alonso d.</a></li>
+                                    <li>nov 22, 2022</li>
+                                </ul>
+                                <h3 class="title tgcommon__hover"><a href="blog-details.html">Experimentally accessible by a connection to the multiple communities</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trending__post stories-small-post__item">
+                            <div class="trending__post-thumb tgImage__hover">
+                                <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog14.jpg" alt="img"></a>
+                            </div>
+                            <div class="trending__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">Gaming</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                </ul>
+                                <h4 class="title tgcommon__hover"><a href="blog-details.html">Scientists speculate that ours might not be held</a></h4>
+                                <ul class="post__activity list-wrap">
+                                    <li><i class="fal fa-signal"></i> 1.5k</li>
+                                    <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                    <li><i class="fal fa-share-alt"></i> 32</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trending__post stories-small-post__item">
+                            <div class="trending__post-thumb tgImage__hover">
+                                <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog15.jpg" alt="img"></a>
+                            </div>
+                            <div class="trending__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">tech</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                </ul>
+                                <h4 class="title tgcommon__hover"><a href="blog-details.html">The Multiverse is the collection of alternate universes</a></h4>
+                                <ul class="post__activity list-wrap">
+                                    <li><i class="fal fa-signal"></i> 1.5k</li>
+                                    <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                    <li><i class="fal fa-share-alt"></i> 32</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trending__post stories-small-post__item">
+                            <div class="trending__post-thumb tgImage__hover">
+                                <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog11.jpg" alt="img"></a>
+                            </div>
+                            <div class="trending__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">movie</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                </ul>
+                                <h4 class="title tgcommon__hover"><a href="blog-details.html">That share a universal hierarchy a large variety of these</a></h4>
+                                <ul class="post__activity list-wrap">
+                                    <li><i class="fal fa-signal"></i> 1.2k</li>
+                                    <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                    <li><i class="fal fa-share-alt"></i> 26</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trending__post stories-small-post__item">
+                            <div class="trending__post-thumb tgImage__hover">
+                                <a href="#" class="addWish"><i class="fal fa-heart"></i></a>
+                                <a href="blog-details.html"><img src="assets/img/nft/nft_blog09.jpg" alt="img"></a>
+                            </div>
+                            <div class="trending__post-content">
+                                <ul class="tgbanner__content-meta list-wrap">
+                                    <li class="category"><a href="blog.html">sports</a></li>
+                                    <li><span class="by">By</span> <a href="blog.html">miranda h.</a></li>
+                                </ul>
+                                <h4 class="title tgcommon__hover"><a href="blog-details.html">Universes were originated from another due to a major</a></h4>
+                                <ul class="post__activity list-wrap">
+                                    <li><i class="fal fa-signal"></i> 1.2k</li>
+                                    <li><a href="blog-details.html"><i class="fal fa-comment-dots"></i> 150</a></li>
+                                    <li><i class="fal fa-share-alt"></i> 26</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- stories-post-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+
+
+    <!-- footer-area -->
+    <footer class="footer-area footer-style-three footer-bg" data-background="assets/img/bg/footer_bg.jpg">
+
+        <!-- newsletter-area -->
+        <div class="newsletter-style-two style-three pt-80 pb-80">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-6 col-xl-7 col-lg-8">
+                        <div class="newsletter__title text-center mb-35">
+                            <div class="newsletter__title-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <span class="sub-title">newsletter</span>
+                            <h4 class="title">Get notified of the best deals on <br> our WordPress Themes</h4>
+                        </div>
+                        <div class="newsletter__form-wrap text-center">
+                            <form action="#" class="newsletter__form">
+                                <div class="newsletter__form-grp">
+                                    <input type="email" placeholder="Email address" required>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I agree that my submitted data is being collected and stored.
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn" type="submit">
+                                    <span class="text">Subscribe</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- newsletter-area-end -->
+
+        <div class="container">
+            <div class="footer__logo-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="footer__logo logo">
+                            <a href="index.html" class="logo-dark"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+                            <a href="index.html" class="logo-light"><img src="assets/img/logo/w_logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="footer__social">
+                            <ul class="list-wrap">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook <span>25K</span></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter <span>44K</span></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i> Youtube <span>91K</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright__text">
+                            <p>Copyright & Design By <span>@Theme_Genix</span> - 2022</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="copyright__menu">
+                            <ul class="list-wrap">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Advertise</a></li>
+                                <li><a href="#">Store</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/imageRevealHover.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

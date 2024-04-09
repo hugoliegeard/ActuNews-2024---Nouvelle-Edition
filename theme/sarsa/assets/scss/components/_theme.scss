@@ -1,0 +1,300 @@
+@use '../utils' as *;
+/*-------------------------------------------
+
+   Theme Name: Sarsa - News & Magazine HTML Template
+   Author : ThemeGenix
+   Support: themegenix@gmail.com
+   Description: Sarsa - News & Magazine HTML Template
+   Version: 1.0
+
+----------------------------------------------
+
+/************ TABLE OF CONTENTS **************
+
+    01. Theme Default CSS
+    02. Header
+    03. Mobile Menu
+    04. Banner
+    05. Trending Post
+    06. Featured Post
+    07. Video Post
+    08. Hand-Picked Post
+    09. Stories Post
+    10. Popular Post
+    11. Category Post
+    12. Latest Post
+    13. Minimal Post
+    14. Adventure Post
+    15. Blog
+    16. Blog Sidebar
+    17. Newsletter Post
+    18. Footer
+    19. Dark Mode
+
+**********************************************/
+
+@import url($font-url);
+
+
+
+
+/*=============================
+    01. Theme Default CSS
+===============================*/
+body {
+	font-family: var(--tg-body-font-family);
+	font-size: var(--tg-body-font-size);
+	font-weight: var(--tg-fw-regular);
+	color: var(--tg-body-color);
+	line-height: var(--tg-body-line-height);
+    background-color: var(--tg-common-color-gray);
+}
+img,
+.img {
+	max-width: 100%;
+	@include transition(.3s);
+}
+a,
+button {
+	color: var(--tg-theme-primary);
+	outline: none;
+	text-decoration: none;
+	@include transition(.3s);
+}
+a:focus,
+.btn:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	@include box-shadow(none);
+}
+a:hover,
+button:hover {
+	color: var(--tg-theme-primary);
+	text-decoration: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+	outline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--tg-heading-font-family);
+	color: var(--tg-heading-color);
+	margin-top: 0px;
+	font-weight: var(--tg-fw-bold);
+	line-height: 1.2;
+	text-transform: unset;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+}
+.list-wrap,
+.slick-dots {
+	margin: 0px;
+	padding: 0px;
+	& li {
+		list-style: none;
+	}
+}
+.tgcommon__hover {
+    & a {
+        position: relative;
+        display: inline;
+        background-image: linear-gradient(var(--tg-heading-color), var(--tg-heading-color)), linear-gradient(var(--tg-heading-color), var(--tg-heading-color));
+        background-size: 0% 1px, 0 1px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s linear;
+        &:hover {
+            color: inherit;
+            background-size: 0 1px, 100% 1px;
+        }
+    }
+}
+.tgImage__hover {
+    overflow: hidden;
+    & a {
+        display: block;
+        &:hover {
+            & img {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+    & img {
+        display: block;
+        @include transition(.5s);
+        @include transform(scale(1));
+    }
+}
+p {
+	font-family: var(--tg-body-font-family);
+	font-size: var(--tg-body-font-size);
+	line-height: var(--tg-body-line-height);
+	font-weight: var(--tg-fw-regular);
+	color: var(--tg-body-color);
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid var(--tg-common-color-gray);
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: var(--tg-heading-color);
+	cursor: pointer;
+	font-size: var(--tg-body-font-size);
+	font-weight: var(--tg-fw-regular);
+}
+.slick-slide:focus-visible {
+    outline: none;
+}
+input[type="color"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border-radius: 50%;
+}
+
+*::-moz-selection {
+	background: var(--tg-theme-primary);
+	color: var(--tg-common-color-white);
+	text-shadow: none;
+}
+::-moz-selection {
+	background: var(--tg-theme-primary);
+	color: var(--tg-common-color-white);
+	text-shadow: none;
+}
+::selection {
+	background: var(--tg-theme-primary);
+	color: var(--tg-common-color-white);
+	text-shadow: none;
+}
+
+/*=============================
+    - Input Placeholder
+===============================*/
+*::-moz-placeholder {
+	color: var(--tg-body-color);
+	font-size: var(--tg-body-font-size);
+	opacity: 1;
+}
+*::placeholder {
+	color: var(--tg-body-color);
+	font-size: var(--tg-body-font-size);
+	opacity: 1;
+}
+
+/*=============================
+    - Common Classes
+===============================*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+/*=============================
+    - Bootstrap Custom
+=============================*/
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    --bs-gutter-x: 30px;
+}
+.gutter-y-30 {
+  	--bs-gutter-y: 30px;
+}
+.gx-0 {
+	--bs-gutter-x: 0;
+}
+.row-gutters-40 {
+	--bs-gutter-x: 40px;
+    @media #{$md} {
+        --bs-gutter-x: 30px;
+    }
+}
+.custom-container {
+    max-width: 1330px;
+	@media #{$xxl} {
+        max-width: 1530px;
+    }
+	@media #{$xl} {
+        max-width: 1320px;
+    }
+	@media #{$lg} {
+        max-width: 960px;
+    }
+	@media #{$md} {
+        max-width: 720px;
+    }
+	@media #{$xs} {
+        max-width: 100%;
+    }
+	@media #{$sm} {
+        max-width: 540px;
+    }
+}
+.container {
+	@media #{$xl} {
+        max-width: 1260px;
+    }
+	@media #{$lg} {
+        max-width: 960px;
+    }
+	@media #{$md} {
+        max-width: 720px;
+    }
+	@media #{$xs} {
+        max-width: 100%;
+    }
+	@media #{$sm} {
+        max-width: 540px;
+    }
+}
+
+.include-bg{
+	@include background();
+}

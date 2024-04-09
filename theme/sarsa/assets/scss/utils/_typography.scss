@@ -1,0 +1,49 @@
+// Font URL
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+
+// Font Family
+$theme-fonts: (
+    body: (
+        font-family: "'Roboto', sans-serif",
+    ),
+    heading: (
+        font-family: "'Roboto', sans-serif",
+    ),
+    icon: (
+        font-family: '"Font Awesome 5 Pro"',
+    )
+);
+
+
+// Font Size
+$font-size: (
+    body: (
+        font-size: 16px,
+    ),
+);
+
+
+// Line Height
+$theme-lh: (
+    body: (
+        line-height: 1.62,
+    ),
+    heading: (
+        line-height: 1.2,
+    ),
+);
+
+
+// Font Weight
+$font-weight: (
+    fw: (
+        extra-bold: 800,
+        bold: 700,
+        semi-bold: 600,
+        medium: 500,
+        regular: 400,
+        light: 300,
+    ),
+);
