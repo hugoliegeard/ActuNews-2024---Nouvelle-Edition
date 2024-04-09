@@ -55,3 +55,11 @@ Connexion en tant qu'`utilisateur` :
 
 > Email : user@actu.news \
 > Mot de passe : demo
+
+## Lancer le serveur
+
+Depuis la racine de votre projet, lancez la commande :
+
+```bash
+symfony serve -d
+```
