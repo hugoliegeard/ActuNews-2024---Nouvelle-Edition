@@ -9,6 +9,6 @@ controllers:
 #    path: / # http://localhost:8000/
 #    controller: App\Controller\DefaultController::home
 
-default_contact:
-    path: /contact # http://localhost:8000/contact
-    controller: App\Controller\DefaultController::contact
+#default_contact:
+#    path: /page/contact # http://localhost:8000/contact
+#    controller: App\Controller\DefaultController::contact

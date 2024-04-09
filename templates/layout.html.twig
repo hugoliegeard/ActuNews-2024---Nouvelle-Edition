@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {#  -- Ici les feuilles de styles de mon thème --   #}
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/imageRevealHover.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {#  -- Ici les scripts de mon thème --   #}
+    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.marquee.min.js') }}"></script>
+    <script src="{{ asset('assets/js/imageRevealHover.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    {#  -- Ici le contenu de mon thème --   #}
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    {% include 'components/_header.html.twig' %}
+    <!-- header-area-end -->
+
+
+    <!-- main-area -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    {% include 'components/_footer.html.twig' %}
+    <!-- footer-area-end -->
+
+{% endblock %}

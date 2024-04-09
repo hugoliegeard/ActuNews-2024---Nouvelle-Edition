@@ -8,10 +8,18 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class DefaultController extends AbstractController
 {
+
     #[Route('/', name: 'default_home', methods: ['GET'])]
     public function home(): Response
     {
         return $this->render('default/home.html.twig');
+    }
+
+
+    #[Route('/contact', name: 'default_contact', methods: ['GET'])]
+    public function contact(): Response
+    {
+        return $this->render('default/contact.html.twig');
     }
 
     /**
@@ -23,7 +31,7 @@ class DefaultController extends AbstractController
     #[Route('/{slug}', name: 'default_category', methods: ['GET'])]
     public function category($slug): Response
     {
-        return new Response("<h1>Categorie : $slug</h1>");
+        return $this->render('default/home.html.twig');
     }
 
     /**
@@ -33,11 +41,6 @@ class DefaultController extends AbstractController
     #[Route('/{category}/{slug}', name: 'default_post', methods: ['GET'])]
     public function post($category, $slug): Response
     {
-        return new Response("<h1> Page article: $category, $slug </h1>");
-    }
-
-    public function contact(): Response
-    {
-        return new Response("<h1>Page Contact</h1>");
+        return $this->render('default/home.html.twig');
     }
 }
