@@ -1,5 +1,14 @@
+
 controllers:
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+#default_home:
+#    path: / # http://localhost:8000/
+#    controller: App\Controller\DefaultController::home
+
+default_contact:
+    path: /contact # http://localhost:8000/contact
+    controller: App\Controller\DefaultController::contact
