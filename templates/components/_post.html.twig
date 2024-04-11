@@ -1,0 +1,37 @@
+<div class="minimal__post-item grid-item">
+    <div class="minimal__post-thumb tgImage__hover">
+        <div class="minimal__post-tags">
+            {% for category in post.categories %}
+                <a href="{{ path('default_category', { 'slug' : category.slug }) }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        </div>
+        <a href="{{ path('default_post', {
+            'category' : post.categories[0].slug,
+            'slug' : post.slug
+        }) }}">
+            <img src="{{ post.image }}"
+                 alt="{{ post.title }}">
+        </a>
+    </div>
+    <div class="minimal__post-content">
+        <ul class="tgbanner__content-meta list-wrap">
+            <li>
+                <span class="by">Par</span>
+                <a href="#">
+                    {{ post.user.firstName }} {{ post.user.familyName }}
+                </a>
+            </li>
+            <li>{{ post.publishedAt|date('d/m/Y') }}</li>
+        </ul>
+        <h4 class="title tgcommon__hover">
+            <a href="{{ path('default_post', {
+                'category' : post.categories[0].slug,
+                'slug' : post.slug
+            }) }}">
+                {{ post.title }}
+            </a>
+        </h4>
+    </div>
+</div>

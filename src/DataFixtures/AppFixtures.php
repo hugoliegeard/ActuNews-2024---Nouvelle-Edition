@@ -105,6 +105,7 @@ class AppFixtures extends Fixture
                 ->setCreatedAt($currentDate)
                 ->setUpdatedAt($currentDate)
                 ->setPublishedAt($currentDate)
+                ->addCategory($category)
                 ->setUser($reporter);
 
             $manager->persist($post);
