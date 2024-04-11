@@ -34,10 +34,10 @@ class Post
     #[ORM\Column]
     private ?\DateTimeImmutable $updatedAt = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $deletedAt = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $publishedAt = null;
 
     /**
@@ -46,9 +46,19 @@ class Post
     #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'posts')]
     private Collection $categories;
 
+    #[ORM\ManyToOne(inversedBy: 'posts')]
+    private ?User $user = null;
+
+    /**
+     * @var Collection<int, Tag>
+     */
+    #[ORM\ManyToMany(targetEntity: Tag::class, mappedBy: 'posts')]
+    private Collection $tags;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->tags = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -172,6 +182,45 @@ class Post
     public function removeCategory(Category $category): static
     {
         $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Tag>
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(Tag $tag): static
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags->add($tag);
+            $tag->addPost($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): static
+    {
+        if ($this->tags->removeElement($tag)) {
+            $tag->removePost($this);
+        }
 
         return $this;
     }
