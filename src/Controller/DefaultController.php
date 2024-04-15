@@ -34,7 +34,7 @@ class DefaultController extends AbstractController
     /**
      * Permet d'afficher les articles de la catégorie
      * ex. https://localhost:8000/politique
-     * @param $slug
+     * @param Category $category
      * @return Response
      */
     #[Route('/{slug}', name: 'default_category', methods: ['GET'])]
