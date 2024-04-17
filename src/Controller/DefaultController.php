@@ -16,7 +16,7 @@ class DefaultController extends AbstractController
     public function home(PostRepository $postRepository): Response
     {
         #1. Récupération des derniers articles
-        $posts = $postRepository->findAll();
+        $posts = $postRepository->findBy([], ['publishedAt' => 'DESC']);
 
         #2. Passer a la vue les informations reçues
         return $this->render('default/home.html.twig', [

@@ -37,15 +37,27 @@
                     <span class="switcher__btn dark-mode"><i class="flaticon-moon"></i></span>
                 </nav>
             </li>
-            <li class="user"><a href="#"><i class="far fa-user"></i></a></li>
-            <li class="header-cart"><a href="#"><i class="far fa-shopping-basket"></i></a></li>
-            <li class="header-search"><a href="#"><i class="far fa-search"></i></a>
-                <div class="header__top-search">
-                    <form action="#">
-                        <input type="text" placeholder="Search here...">
-                    </form>
-                </div>
-            </li>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                {% if is_granted('ROLE_REPORTER') %}
+                    <li class="user">
+                        <a title="Créer un article" href="{{ path('post_create') }}">
+                            <i class="far fa-newspaper"></i></a>
+                    </li>
+                {% endif %}
+                <li class="user">
+                    <a title="Déconnexion" href="{{ path('app_logout') }}">
+                        <i class="far fa-sign-out"></i></a>
+                </li>
+            {% else %}
+                <li class="user">
+                    <a href="{{ path('app_login') }}" title="Connexion">
+                        <i class="far fa-sign-in"></i></a>
+                </li>
+                <li class="user">
+                    <a title="Inscription" href="{{ path('user_register') }}">
+                        <i class="far fa-user-plus"></i></a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

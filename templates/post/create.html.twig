@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title 'Créer un article' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <!-- https://select2.org/getting-started/installation -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'post_content' );
+        $(document).ready(function() {
+            $('#post_categories').select2({
+                placeholder: "-- Choisissez vos catégories --",
+                allowClear: true
+            });
+        });
+        function slugify(str) {
+            return String(str)
+                .normalize('NFKD') // split accented characters into their base characters and diacritical marks
+                .replace(/[\u0300-\u036f]/g, '') // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+                .trim() // trim leading or trailing whitespace
+                .toLowerCase() // convert to lowercase
+                .replace(/[^a-z0-9 -]/g, '') // remove non-alphanumeric characters
+                .replace(/\s+/g, '-') // replace spaces with hyphens
+                .replace(/-+/g, '-'); // remove consecutive hyphens
+        }
+
+        document.querySelector('#post_title').addEventListener('input', function() {
+            document.querySelector('#post_slug').value = slugify(this.value);
+        });
+
+    </script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <h1 class="display-3">Créer un article</h1>
+                {{ form(form, { 'attr': {'novalidate':'novalidate'} }) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

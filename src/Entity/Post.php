@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -17,15 +18,27 @@ class Post
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message: 'Attention, n\'oubliez pas votre titre')]
+    #[Assert\Length(
+        max: 255,
+        maxMessage: 'Attention, pas plus de {{ limit }} caractères.'
+    )]
     private ?string $title = null;
 
     #[ORM\Column(length: 255, unique: true)]
+    #[Assert\NotBlank(message: 'Attention, n\'oubliez pas votre alias')]
+    #[Assert\Length(
+        max: 255,
+        maxMessage: 'Attention, pas plus de {{ limit }} caractères.'
+    )]
     private ?string $slug = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message: 'Attention, n\'oubliez pas votre illustration')]
     private ?string $image = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message: 'Attention, n\'oubliez pas votre contenu')]
     private ?string $content = null;
 
     #[ORM\Column]
@@ -38,11 +51,18 @@ class Post
     private ?\DateTimeImmutable $deletedAt = null;
 
     #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $publishedAt = null;
+    #[Assert\NotNull(
+        message: 'Attention, n\'oubliez pas la date'
+    )]
+    private ?\DateTimeImmutable $publishedAt;
 
     /**
      * @var Collection<int, Category>
      */
+    #[Assert\Count(
+        min: 1,
+        minMessage: 'Vous devez choisir au moins une catégorie',
+    )]
     #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'posts')]
     private Collection $categories;
 

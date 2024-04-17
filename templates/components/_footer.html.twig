@@ -4,10 +4,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4">
                     <div class="footer__logo logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/logo/w_logo.png') }}" alt="Logo"></a>
+                        <a href="{{ path('default_home') }}"><img src="{{ asset('assets/img/logo/w_logo.png') }}" alt="Logo"></a>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-8">
+                {#<div class="col-lg-9 col-md-8">
                     <div class="footer__social">
                         <ul class="list-wrap">
                             <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook <span>25K</span></a></li>
@@ -15,23 +15,23 @@
                             <li><a href="#"><i class="fab fa-youtube"></i> Youtube <span>91K</span></a></li>
                         </ul>
                     </div>
-                </div>
+                </div>#}
             </div>
         </div>
         <div class="footer__copyright">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="copyright__text">
-                        <p>Copyright & Design By <span>@Theme_Genix</span> - 2022</p>
+                        <p>Copyright &copy; <span>CDA Cergy</span> - {{ 'now'|date('Y') }}</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="copyright__menu">
                         <ul class="list-wrap">
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Advertise</a></li>
-                            <li><a href="#">Store</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Condition d'utilisation</a></li>
+                            <li><a href="#">RGPD</a></li>
+                            <li><a href="#">Mentions Légales</a></li>
                         </ul>
                     </div>
                 </div>

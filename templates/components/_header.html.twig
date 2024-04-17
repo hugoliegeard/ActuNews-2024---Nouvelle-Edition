@@ -4,20 +4,20 @@
             <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-4 d-none d-lg-block">
                     <div class="d-flex gap-4 align-items-center">
-                        <div class="offcanvas-toggle">
+                        {#<div class="offcanvas-toggle">
                             <a href="#"><i class="flaticon-menu-bar"></i></a>
-                        </div>
+                        </div>#}
                         <div class="header__top-logo logo">
-                            <a href="index.html" class="logo-dark">
+                            <a href="{{ path('default_home') }}" class="logo-dark">
                                 <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo">
                             </a>
-                            <a href="index.html" class="logo-light">
+                            <a href="{{ path('default_home') }}" class="logo-light">
                                 <img src="{{ asset('assets/img/logo/w_logo.png') }}" alt="Logo">
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-9 col-lg-8">
+                {#<div class="col-xl-9 col-lg-8">
                     <div class="footer__social">
                         <ul class="list-wrap">
                             <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook <span>25K</span></a></li>
@@ -25,7 +25,7 @@
                             <li><a href="#"><i class="fab fa-youtube"></i> Youtube <span>91K</span></a></li>
                         </ul>
                     </div>
-                </div>
+                </div>#}
             </div>
         </div>
     </div>
@@ -43,8 +43,8 @@
                         <nav class="tgmobile__menu-box">
                             <div class="close-btn"><i class="fas fa-times"></i></div>
                             <div class="nav-logo">
-                                <a href="index.html" class="logo-dark"><img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo"></a>
-                                <a href="index.html" class="logo-light"><img src="{{ asset('assets/img/logo/w_logo.png') }}" alt="Logo"></a>
+                                <a href="{{ path('default_home') }}" class="logo-dark"><img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo"></a>
+                                <a href="{{ path('default_home') }}" class="logo-light"><img src="{{ asset('assets/img/logo/w_logo.png') }}" alt="Logo"></a>
                             </div>
                             <div class="tgmobile__search">
                                 <form action="#">
@@ -55,7 +55,7 @@
                             <div class="tgmobile__menu-outer">
                                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                             </div>
-                            <div class="social-links">
+                            {#<div class="social-links">
                                 <ul class="list-wrap">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -63,7 +63,7 @@
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>#}
                         </nav>
                     </div>
                     <div class="tgmobile__menu-backdrop"></div>
@@ -74,7 +74,7 @@
     </div>
 
     <!-- offCanvas-area -->
-    <div class="offCanvas__wrap">
+    {#<div class="offCanvas__wrap">
         <div class="offCanvas__body">
             <div class="offCanvas__toggle"><i class="flaticon-addition"></i></div>
             <div class="offCanvas__content">
@@ -108,7 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="offCanvas__overlay"></div>
+    <div class="offCanvas__overlay"></div>#}
     <!-- offCanvas-area-end -->
 
 </header>
