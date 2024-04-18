@@ -1,0 +1,65 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}Gestion des articles{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.4/css/dataTables.dataTables.min.css">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="//cdn.datatables.net/2.0.4/js/dataTables.min.js"></script>
+    <script>
+        let table = new DataTable('.table');
+    </script>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col mx-auto">
+                <h1>Gestion des articles</h1>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Image</th>
+                        <th>PublishedAt</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{ post.id }}</td>
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.slug }}</td>
+                            <td><img src="{{ asset('uploads/posts/'~post.image) }}" alt="{{ post.title }}"></td>
+
+                            <td>{{ post.publishedAt ? post.publishedAt|date('Y-m-d H:i:s') : '' }}</td>
+                            <td>
+                                <a href="{{ path('default_post', {'category': post.categories[0].slug, 'slug': post.slug}) }}">Consulter</a>
+                                <a href="{{ path('app_post_crud_edit', {'id': post.id}) }}">Modifier</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="10">
+                                <div class="alert alert-info">
+                                    Pas d'article pour le moment.
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

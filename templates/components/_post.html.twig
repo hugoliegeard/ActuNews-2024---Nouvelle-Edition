@@ -11,7 +11,7 @@
             'category' : post.categories[0].slug,
             'slug' : post.slug
         }) }}">
-            <img src="{{ post.image }}"
+            <img src="{{ asset('uploads/posts/' ~ post.image) }}"
                  alt="{{ post.title }}">
         </a>
     </div>

@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}New Post{% endblock %}
+
+{% block content %}
+    <h1>Create new Post</h1>
+
+    {{ include('post_crud/_form.html.twig') }}
+
+    <a href="{{ path('app_post_crud_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <!-- blog-details-area -->
+    <section class="blog-details-area pt-80 pb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- POST -->
+                <div class="col-xl-9 col-lg-8">
+                    <div class="blog-details-wrap">
+                        <ul class="tgbanner__content-meta list-wrap">
+                            <li class="category">
+                                {% for category in post.categories %}
+                                    <a href="{{ path('default_category', { 'slug' : category.slug }) }}">
+                                        {{ category.name }}
+                                    </a>
+                                {% endfor %}
+                            </li>
+                            <li><span class="by">Par</span>
+                                <a href="#">
+                                    {{ post.user.firstName }}
+                                    {{ post.user.familyName }}
+                                </a></li>
+                            <li>{{ post.publishedAt|date('d/m/Y') }}</li>
+                        </ul>
+                        <h2 class="title">{{ post.title }}</h2>
+                        <div class="blog-details-thumb">
+                            <img src="{{ asset('uploads/posts/' ~ post.image) }}" alt="{{ post.title }}">
+                        </div>
+                        <div class="blog-details-content">
+                            {{ post.content | raw }}
+                        </div>
+                        <div class="blog-details-bottom">
+                            <div class="row align-items-baseline">
+                                <div class="col-xl-6 col-md-7">
+                                    <div class="blog-details-tags">
+                                        <ul class="list-wrap mb-0">
+                                            {% for tag in post.tags %}
+                                                <li>
+                                                    <a href="#">
+                                                        #{{ tag.name }}
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-5">
+                                    <div class="blog-details-share">
+                                        <h6 class="share-title">Partager:</h6>
+                                        <ul class="list-wrap mb-0">
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-avatar-wrap">
+                            <div class="blog-avatar-img">
+                                <a href="#"><i class="far fa-check"></i>
+                                    <img src="{{ asset('assets/img/others/avatar.png') }}" alt="img"></a>
+                            </div>
+                            <div class="blog-avatar-content">
+                                <p>Monty Hython is a Writer at Sarsa and has been covering emerging technologies &
+                                    venture capital there since 2013. He covers a wide variety of news from early and
+                                    late stage startups to massive tech behemoths.</p>
+                                <h5 class="name">Alison Fiano</h5>
+                                <span class="designation">OG Author</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SIDEBAR -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="thumb">
+                        {{ render(controller(
+                            'App\\Controller\\RenderController::renderSidebar', {max: 3}
+                        )) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog-details-area-end -->
+{% endblock %}
+

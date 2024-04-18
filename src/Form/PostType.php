@@ -9,6 +9,7 @@ use App\Entity\User;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -52,12 +53,18 @@ class PostType extends AbstractType
                     ])
                 ],
             ])
-            ->add('content', TextareaType::class)
-            ->add('publishedAt', null, [
+            ->add('content', TextareaType::class, [
+                'label' => false
+            ])
+            ->add('publishedAt', DateTimeType::class, [
                 'widget' => 'single_text',
+                'label' => 'Date de publication ?'
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Enregistrer mon article'
+                'label' => 'Enregistrer mon article',
+                'attr' => [
+                    'class' => 'w-100'
+                ]
             ])
         ;
     }

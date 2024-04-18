@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Post;
 use App\Repository\CategoryRepository;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -56,9 +57,11 @@ class DefaultController extends AbstractController
      * CONSIGNE : Créée la route permet d'afficher un article.
      * ex. https://localhost:8000/categorie/alias
      */
-    #[Route('/{category}/{slug}', name: 'default_post', methods: ['GET'])]
-    public function post($category, $slug): Response
+    #[Route('/{category}/{slug}.html', name: 'default_post', methods: ['GET'])]
+    public function post(Post $post): Response
     {
-        return $this->render('default/home.html.twig');
+        return $this->render('default/post.html.twig', [
+            'post' => $post
+        ]);
     }
 }

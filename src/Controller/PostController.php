@@ -26,7 +26,6 @@ class PostController extends AbstractController
         # Création d'un Post
         $post = new Post();
         $post->setCreatedAt(new \DateTimeImmutable());
-        $post->setPublishedAt(new \DateTimeImmutable());
         $post->setUpdatedAt(new \DateTimeImmutable());
 
         # Récupération de l'utilisateur connecté en session

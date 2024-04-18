@@ -5,27 +5,18 @@
     </div>
     <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
         <ul class="navigation">
-            <li class="active menu-item-has-children"><a href="#">Home</a>
-                <ul class="sub-menu">
-                    <li><a href="index.html">Home Default</a></li>
-                    <li><a href="index-2.html">Home Interior</a></li>
-                    <li><a href="index-3.html">Home Travel</a></li>
-                    <li><a href="index-4.html">Home Technology</a></li>
-                    <li><a href="index-5.html">Home NFT</a></li>
-                    <li><a href="index-6.html">Home Fashion</a></li>
-                    <li><a href="index-7.html">Home Adventure</a></li>
-                    <li class="active"><a href="index-8.html">Home Minimal</a></li>
-                </ul>
+            <li>
+                <a href="{{ path('default_home') }}">Accueil</a>
             </li>
-            <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li class="menu-item-has-children"><a href="#">Post Type</a>
-                <ul class="sub-menu">
-                    <li><a href="blog.html">Our Blog</a></li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                </ul>
-            </li>
-            <li><a href="nft.html">NFT</a></li>
+            {% for category in categories %}
+                <li>
+                    <a href="{{ path('default_category', {
+                        'slug': category.slug
+                    }) }}">
+                        {{ category.name }}
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
     <div class="tgmenu__action">

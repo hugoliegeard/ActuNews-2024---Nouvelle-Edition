@@ -35,7 +35,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="tgmenu__wrap">
-                        {% include 'components/_nav.html.twig' %}
+                        {#{% include 'components/_nav.html.twig' %}#}
+                        {{ render(controller(
+                            'App\\Controller\\RenderController::renderNavigation'
+                        )) }}
                         <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                     </div>
                     <!-- Mobile Menu  -->

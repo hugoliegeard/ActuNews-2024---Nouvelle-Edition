@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}Edit Post{% endblock %}
+
+{% block content %}
+    <h1>Edit Post</h1>
+
+    {{ include('post_crud/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_post_crud_index') }}">back to list</a>
+
+    {{ include('post_crud/_delete_form.html.twig') }}
+{% endblock %}
