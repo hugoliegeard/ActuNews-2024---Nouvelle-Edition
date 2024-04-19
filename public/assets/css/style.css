@@ -1,0 +1,330 @@
+/*==========================================================*/
+/* Main Elements
+/*==========================================================*/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'poppinsregular';
+	font-weight: 400;
+}
+
+a {
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	color: #ff3366;
+}
+
+a:hover {
+	color: #ff3366;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ff3366;
+	text-decoration: none;
+	border: none;
+	outline: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'poppinssemibold';
+}
+img {
+	max-width: 100%;
+}
+ol {padding-left: 17px;}
+ol>li {margin-bottom: 15px;}
+ol ul {padding-top: 10px;}
+.vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*==========================================================*/
+/* Include fonts
+/*==========================================================*/
+
+@font-face {
+    font-family: 'poppinsitalic';
+    src: url('../fonts/poppins-italic-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('../fonts/poppins-medium-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsmedium_italic';
+    src: url('../fonts/poppins-mediumitalic-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinssemibold';
+    src: url('../fonts/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsbold';
+    src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*==========================================================*/
+/* Typography
+/*==========================================================*/
+
+body {
+	font-family: 'poppinsregular';
+	font-size: 16px;
+	line-height: 180%;
+	color: #202020;
+}
+
+h1, h2 {
+	font-size: 26px;
+	line-height: 160%;
+	padding-top: 50px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+b {
+	font-family: 'poppinssemibold';
+	font-weight: inherit;
+}
+
+/*==========================================================*/
+/* Header
+/*==========================================================*/
+
+#header {
+	background: #202020;
+	width: 100%;
+	height: 60px;
+	color: #FFFFFF;
+	top: 0;
+	left: 0;
+	position: fixed;
+	padding: 0 50px;
+	text-align: center;
+}
+
+#header h1 {
+	line-height: 60px;
+	font-size: 16px;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	font-family: 'poppinsmedium';
+}
+
+#header h1 a {
+	color: #FFFFFF;
+}
+
+#header h1 a:hover {
+	color: #ff3366;
+}
+
+/*==========================================================*/
+/* Menu
+/*==========================================================*/
+
+#doc-menu {
+	overflow: auto;
+	width: 300px;
+	max-height: 100%;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	border-right: 1px solid rgba(0,0,0,0.06);
+}
+
+#doc-menu ul {
+	margin: 60px 0;
+	color: #ff3366;
+}
+#doc-menu ul li a {
+    font-family: 'poppinsmedium';
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #202020;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 6px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 1;
+    line-height: 1;
+    min-height: 43px;
+}
+
+#doc-menu ul li a:hover,
+#doc-menu ul li.active a {
+	background: #ff3366;
+	color: #fff;
+}
+
+/*==========================================================*/
+/* Content
+/*==========================================================*/
+
+#doc-content {
+	position: fixed;
+	padding: 0 50px;
+	top: 60px;
+	bottom: 0;
+	left: 300px;
+	width: calc(100% - 300px);
+	overflow: auto;
+}
+
+#doc-content > * {
+	margin: 50px 0 0 0;
+}
+
+#doc-content > *:first-child {
+	margin: 0;
+}
+
+#doc-content > *:last-child {
+	margin-bottom: 50px;
+}
+
+#doc-content h1 span {
+    background: #ff3366;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    margin-right: 15px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+#doc-content h2 span {
+	color: #999999;
+	margin-right: 15px;
+}
+
+#doc-content ul {
+	margin-left: 50px;
+}
+
+#intro {
+    width: 100%;
+    padding: 15vh 0 15vh;
+    text-align: center;
+    display: table;
+    background-size: auto 80%;
+    min-height: 100vh;
+}
+
+#intro h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 46px;
+}
+
+#intro h1 span {
+	margin-right: 0;
+}
+
+#intro h2 {
+	margin: 0;
+	color: #999999;
+	font-size: 50px;
+	font-family: 'poppinssemibold';
+	line-height: 1;
+}
+
+.syntaxhighlighter {
+	margin-top: 50px !important;
+	overflow: auto;
+}
+
+.syntaxhighlighter .line .number {
+	width: auto !important;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+
+	#header {
+		position: relative;
+		width: 100%;
+		text-align: center;
+	}
+
+	#doc-menu {
+		position: relative;
+		width: 100%;
+		max-height: none;
+		top: auto;
+	}
+
+	#doc-content {
+		position: relative;
+		width: 100%;
+		top: auto;
+		left: auto;
+	}
+
+	#intro {
+		height: 500px;
+	}
+
+}
+
+
+h4,h5 {
+	font-weight:bold;
+}
+
+.files-folder {
+	margin-bottom: 20px !important;
+}
+.files-folder img {
+    border: 1px solid #c7254e;
+}
