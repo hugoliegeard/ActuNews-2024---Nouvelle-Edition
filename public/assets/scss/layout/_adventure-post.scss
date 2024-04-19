@@ -1,0 +1,127 @@
+@use '../utils' as *;
+
+/*=============================
+    14. Adventure Post
+===============================*/
+.adventure__post {
+    &-wrapper {
+        --bs-gutter-x: 30px;
+        @include flexbox();
+        flex-wrap: wrap;
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    &-thumb {
+        position: relative;
+        & img {
+            height: 270px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+    }
+    &-item {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin: 0 0 30px;
+        @media #{$md} {
+            width: 50%;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+        &:nth-child(2),
+        &:nth-child(11) {
+            & .adventure__post-thumb img {
+                height: 370px;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(12) {
+            & .adventure__post-thumb img {
+                height: 330px;
+            }
+        }
+        &:nth-child(4),
+        &:nth-child(13) {
+            & .adventure__post-thumb img {
+                height: 450px;
+            }
+        }
+        &:nth-child(5),
+        &:nth-child(14) {
+            & .adventure__post-thumb img {
+                height: 370px;
+            }
+        }
+        &:nth-child(6),
+        &:nth-child(15) {
+            & .adventure__post-thumb img {
+                height: 250px;
+            }
+        }
+        &:nth-child(7),
+        &:nth-child(16) {
+            & .adventure__post-thumb img {
+                height: 380px;
+            }
+        }
+        &:nth-child(8),
+        &:nth-child(17) {
+            & .adventure__post-thumb img {
+                height: 540px;
+                @media #{$md} {
+                    height: 450px;
+                }
+            }
+        }
+        &:nth-child(9),
+        &:nth-child(18) {
+            & .adventure__post-thumb img {
+                height: 430px;
+            }
+        }
+        &:nth-child(10),
+        &:nth-child(19) {
+            & .adventure__post-thumb img {
+                height: 490px;
+                @media #{$md} {
+                    height: 400px;
+                }
+            }
+        }
+        &:nth-child(11),
+        &:nth-child(20) {
+            & .adventure__post-thumb img {
+                height: 340px;
+            }
+        }
+        &:nth-child(12),
+        &:nth-child(21) {
+            & .adventure__post-thumb img {
+                height: 250px;
+            }
+        }
+    }
+    &-content {
+        & .tgbanner__content-meta {
+            margin: 0 0 10px;
+        }
+        & .title {
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: -.4px;
+            margin: 0 15px 0 0;
+        }
+    }
+    &-more {
+        margin-top: 10px;
+    }
+}

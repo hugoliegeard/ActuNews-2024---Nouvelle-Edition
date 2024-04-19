@@ -1,0 +1,142 @@
+@use '../utils' as *;
+
+/*=============================
+    08. Hand-Picked Post
+===============================*/
+.handpicked-post-area {
+    @media #{$lg} {
+        padding-bottom: 30px;
+    }
+    &.white-bg {
+        & .handpicked__item.big-post .handpicked__content {
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.04);
+        }
+    }
+}
+.handpicked {
+    &__item {
+        margin: 0 0 0;
+        &.big-post {
+            margin: 0 0 30px;
+            @media #{$lg} {
+                margin: 0 0 50px;
+            }
+            & .handpicked__thumb {
+                margin: 0 0 0;
+                & img {
+                    height: 582px;
+                    object-fit: cover;
+                    object-position: center;
+                    @media #{$lg} {
+                        height: 400px;
+                    }
+                    @media #{$xs} {
+                        height: 220px;
+                        width: 100%;
+                    }
+                    @media #{$sm} {
+                        height: 280px;
+                    }
+                }
+            }
+            & .handpicked__content {
+                background: var(--tg-common-color-white);
+                max-width: 510px;
+                margin: -55px auto 0 40px;
+                position: relative;
+                padding: 35px 40px;
+                z-index: 1;
+                @media #{$xs} {
+                    max-width: 100%;
+                    margin: 0 auto 40px;
+                    padding: 30px 25px;
+                }
+                @media #{$sm} {
+                    padding: 35px 35px;
+                }
+                & .tgbanner__content-meta {
+                    margin: 0 0 7px;
+                }
+                & .title {
+                    font-size: 24px;
+                    margin: 0 0 0;
+                    line-height: 1.3;
+                    letter-spacing: -.5px;
+                    @media #{$xs} {
+                        font-size: 20px;
+                        margin: 0 0 0;
+                        line-height: 1.4;
+                        letter-spacing: -0.3px;
+                    }
+                    @media #{$sm} {
+                        font-size: 24px;
+                        margin: 0 0 0;
+                        line-height: 1.3;
+                        letter-spacing: -0.5px;
+                    }
+                }
+            }
+        }
+        &.small-post {
+            padding: 0 0 35px;
+            margin: 0 0 30px;
+            position: relative;
+            @media #{$lg} {
+                padding: 0 0;
+                margin: 0 0 50px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: -10px;
+                bottom: 0;
+                background-image: url(../img/bg/line3.png);
+                width: calc(100% + 10px);
+                height: 8px;
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__thumb {
+        margin: 0 0 25px;
+        & img {
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            @media #{$xs} {
+                width: 100%;
+            }
+            @media #{$sm} {
+                height: 280px;
+            }
+        }
+    }
+    &__content {
+        & .tgbanner__content-meta {
+            margin: 0 0 6px;
+        }
+        & .title {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 0 0 0;
+        }
+    }
+    &__sidebar-post {
+        & .row > [class*="col-"]:nth-child(odd) {
+            & .handpicked__item.small-post::after {
+                width: calc(100% + 30px);
+                left: 0;
+            }
+        }
+        & .row > [class*="col-"]:nth-last-child(-n+2) {
+            & .handpicked__item.small-post {
+                padding-bottom: 0;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

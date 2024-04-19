@@ -1,0 +1,74 @@
+@use '../utils' as *;
+
+/*=============================
+	1. Button style
+===============================*/
+.btn {
+    -webkit-user-select:none;
+    -moz-user-select: none;
+    user-select: none;
+    background: var(--tg-theme-primary) none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    color: var(--tg-common-color-white);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 18px 35px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    @include transition(.3s);
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        -webkit-transition-duration: 800ms;
+        transition-duration: 800ms;
+        width: 200%;
+        height: 200%;
+        top: 110%;
+        left: 50%;
+        background: var(--tg-theme-secondary);
+        @include transform(translateX(-50%));
+        @include border-radius(50%);
+        z-index: -1;
+    }
+    & > .btn-text {
+        display: block;
+        line-height: 1;
+    }
+    & i {
+        margin-left: 12px;
+    }
+    &:hover {
+        color: var(--tg-common-color-white);
+        &::before {
+            top: -40%;
+        }
+    }
+}
+.border-btn {
+    border: 2px solid #e9e9e9;
+    padding: 18px 30px;
+    @media #{$xs} {
+        padding: 16px 25px;
+    }
+    &::before {
+        display: none;
+    }
+    &:hover {
+        border-color: var(--tg-theme-primary);
+        background: var(--tg-theme-primary);
+    }
+}

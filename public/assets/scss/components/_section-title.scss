@@ -1,0 +1,92 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Section Title
+===============================*/
+.section {
+    &__title {
+        &-wrap {
+            overflow: hidden;
+            &::after {
+                content: "";
+                display: block;
+                background-image: url(../img/bg/section_line.png);
+                background-repeat: repeat;
+                background-size: auto 100%;
+                width: 100%;
+                height: 7px;
+                margin-top: 20px;
+                -webkit-animation-duration: 5s;
+                animation-duration: 5s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-play-state: paused;
+                -moz-animation-play-state: paused;
+                -o-animation-play-state: paused;
+                animation-play-state: paused;
+                -webkit-animation-name: lineMove;
+                animation-name: lineMove;
+            }
+        }
+    }
+    &__sub-title {
+        display: block;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0 0 3px;
+        color: var(--tg-theme-primary);
+    }
+    &__main-title {
+        margin: 0 0;
+        font-size: 24px;
+        letter-spacing: -.5px;
+    }
+    &__read-more {
+        @media #{$xs} {
+            margin-top: 8px;
+        }
+        & a {
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: var(--tg-fw-bold);
+            color: var(--tg-heading-color);
+            gap: 8px;
+            letter-spacing: -.5px;
+            &:hover {
+                color: var(--tg-theme-primary);
+            }
+        }
+    }
+    &__hover-line {
+        &:hover {
+            & .section__title-wrap::after {
+                -webkit-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -o-animation-play-state: running;
+                animation-play-state: running;
+            }
+        }
+    }
+    &__title-white {
+        & .section__sub-title {
+            color: #999999;
+        }
+        & .section__main-title {
+            color: var(--tg-common-color-white);
+        }
+        & .section__read-more {
+            & a {
+                color: var(--tg-common-color-white);
+                &:hover {
+                    color: var(--tg-theme-primary);
+                }
+            }
+        }
+        &::after {
+            opacity: .2;
+        }
+    }
+}
